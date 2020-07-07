@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fffffe;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Proza Libre", sans-serif;
+  color: #094067;
+}
+
+a {
+  text-decoration: none;
+} 
+p {
+  color: #5f6c7b;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.columnSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.blogPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-posts{
+  align-self: flex-start;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blog-posts a {
+  color: #3da9fc;
+  font-style: none;
+}
+
+.blog-posts h2 {
+  margin-bottom: .5vh;
+}
+
+.blog-posts h5 {
+  margin-top: 0;
+  margin-bottom: 1.5vh;
+}
+
+.blog-post-link {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media all and (max-width: 600px) {
+  .footerBackground {
+    background-size: 600px;
+  }
+}

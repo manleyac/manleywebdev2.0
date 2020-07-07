@@ -1,0 +1,16 @@
+.projects {
+}
+
+.projects-collection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+@media all and (max-width: 1050px) {
+  .projects-collection {
+    flex-wrap: wrap;
+  }
+}

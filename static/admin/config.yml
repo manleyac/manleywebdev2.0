@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: manleyac/manley-portfolio
+
+media_folder: manley-portfolio/src/images
+public_folder: manley-portfolio/src/images
+
+collections:
+  - name: blog
+    label: Blog
+    folder: manley-portfolio/src/blog/markdown-pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+  - name: projects
+    label: Projects
+    folder: manley-portfolio/src/components/Projects/markdown-pages
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+      - { name: deploy, label: Deployed, widget: string }
+      - { name: repo, label: Repo, widget: string }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Display Order",
+          name: "order",
+          widget: "number",
+          valueType: "int",
+        }

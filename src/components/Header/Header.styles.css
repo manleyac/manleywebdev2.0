@@ -1,0 +1,24 @@
+.header {
+  margin-top: 0.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  font-family: "Proza Libre", sans-serif;
+  font-weight: 500;
+  color: #094067;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.logoEdge {
+  font-weight: 600px;
+  color: #ef4565;
+}
+
+@media all and (max-width: 700px) {
+  #logo {
+    font-size: larger;
+  }
+}

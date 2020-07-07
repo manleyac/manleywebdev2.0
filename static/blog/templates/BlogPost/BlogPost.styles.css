@@ -1,0 +1,26 @@
+.blog-post-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-post {
+  align-self: flex-start;
+  margin-bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blog-post-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-post a {
+  color: #3da9fc;
+   font-style: none;
+}
+
+.blog-post-content {
+  font-size: 1.25em;
+}

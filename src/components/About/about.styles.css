@@ -1,0 +1,22 @@
+.aboutBody {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.aboutText {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+}
+
+@media all and (max-width: 1050px) {
+  .aboutBody {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .aboutText {
+    width: 90%;
+  }
+}
