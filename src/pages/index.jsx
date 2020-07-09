@@ -1,9 +1,9 @@
 import React from "react";
 
-import { PageHead } from "../components/PageHead/PageHead.component.jsx";
+import SEO from "../components/seo"
 import { Navbar } from "../components/Navbar.component.jsx";
-import { Intro } from "../components/Intro/Intro.component.jsx";
-// import { BlogPreview } from "../components/Blog/BlogPreview.component.jsx";
+import { Intro } from "../components/Intro.component.jsx";
+import BlogPreview from "../components/Blog/BlogPreview.component.jsx";
 // import { Projects } from "../components/Projects/Projects.component.jsx";
 // import { About } from "../components/About/About.component.jsx";
 // import { Contact } from "../components/Contact/Contact.component.jsx";
@@ -20,7 +20,7 @@ const lightTheme = {
     colors: {
       brand: "#18314f",
       background: "#E6FAFC",
-      "accent-1": "#D84727",
+      "accent-1": "#e94a47",
       "accent-2" : "",
       "accent-3" : "",
       "accent-4" : "",
@@ -35,9 +35,10 @@ const lightTheme = {
 const IndexPage = () => {
   return (
     <Grommet theme={lightTheme}>
-      <PageHead />
+      <SEO />
       <Navbar />
       <Intro />
+      <BlogPreview />
     </Grommet>
   );
 };

@@ -3,24 +3,17 @@ import { Header, Heading, Box, Button, Collapsible } from "grommet";
 import { Menu, Close } from "grommet-icons";
 import { Link } from "gatsby";
 import MaxWidth from "./common/MaxWidth";
-import "./Navbar.styles.css";
+
 
 export const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 700px)");
-    mediaQuery.addListener(handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
-    const listener = () => {
-      setOpen(false);
-    };
-    window.addEventListener("scroll", listener);
-    return () => {
-      window.removeEventListener("scroll", listener);
-    };
-  }, []);
+    const mediaQuery = window.matchMedia("(max-width: 900px)")
+    mediaQuery.addListener(handleMediaQueryChange)
+    handleMediaQueryChange(mediaQuery)
+  }, [])
 
   const handleMediaQueryChange = (mediaQuery) => {
     if (mediaQuery.matches) {
@@ -31,19 +24,19 @@ export const Navbar = () => {
   };
 
   const NavLinkClick = () => {
-    setOpen(false);
+    setShow(false);
   };
 
   const NavButton = () => {
     return (
       <>
-        {open ? (
+        {show ? (
           <Button
             icon={<Close color="white" />}
-            onClick={() => setOpen(false)}
+            onClick={() => setShow(false)}
           />
         ) : (
-          <Button icon={<Menu color="white" />} onClick={() => setOpen(true)} />
+          <Button icon={<Menu color="white" />} onClick={() => setShow(true)} />
         )}
       </>
     );
@@ -90,7 +83,7 @@ export const Navbar = () => {
           </Box>
         </Box>
       </Header>
-      <Collapsible direction="vertical" open={open}>
+      <Collapsible direction="vertical" open={show}>
         <Box
           direction="column"
           alignSelf="center"
