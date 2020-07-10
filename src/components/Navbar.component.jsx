@@ -89,6 +89,7 @@ export const Navbar = () => {
           alignSelf="center"
           gap="small"
           justify="around"
+          align="center"
           background="brand"
         >
           {navLinks("navLink", NavLinkClick)}

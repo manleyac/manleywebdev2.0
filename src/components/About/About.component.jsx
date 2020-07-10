@@ -1,7 +1,11 @@
-import React from "react"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { Box, Heading, Image } from "grommet";
+import MaxWidth from "./common/MaxWidth";
+
+
 import builder from "../../images/builder.svg"
 
-import "./about.styles.css"
 
 export const About = () => (
   <div name="about">

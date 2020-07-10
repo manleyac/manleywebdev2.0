@@ -3,7 +3,7 @@ import React from "react";
 import SEO from "../components/seo"
 import { Navbar } from "../components/Navbar.component.jsx";
 import { Intro } from "../components/Intro.component.jsx";
-import BlogPreview from "../components/Blog/BlogPreview.component.jsx";
+import BlogPreview from "../components/BlogPreview.component.jsx";
 // import { Projects } from "../components/Projects/Projects.component.jsx";
 // import { About } from "../components/About/About.component.jsx";
 // import { Contact } from "../components/Contact/Contact.component.jsx";
