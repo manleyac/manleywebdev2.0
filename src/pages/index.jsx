@@ -5,8 +5,8 @@ import { Navbar } from "../components/Navbar.component.jsx";
 import { Intro } from "../components/Intro.component.jsx";
 import BlogPreview from "../components/BlogPreview.component.jsx";
 // import { Projects } from "../components/Projects/Projects.component.jsx";
-// import { About } from "../components/About/About.component.jsx";
-// import { Contact } from "../components/Contact/Contact.component.jsx";
+import { About } from "../components/About.component.jsx";
+import { Contact } from "../components/Contact.component.jsx";
 
 import { Grommet } from "grommet";
 
@@ -39,6 +39,8 @@ const IndexPage = () => {
       <Navbar />
       <Intro />
       <BlogPreview />
+      <About />
+      <Contact />
     </Grommet>
   );
 };
