@@ -1,15 +1,59 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Box, Heading, Image } from "grommet";
+import {
+  Box,
+  Heading,
+  Image,
+  Form,
+  FormField,
+  TextInput,
+  MaskedInput,
+  TextArea,
+  Button
+} from "grommet";
 import MaxWidth from "./common/MaxWidth";
 
 export const Contact = () => {
+  const data = useStaticQuery(graphql`
+    query ContactQuery {
+      file(name: { regex: "/coder/" }) {
+        id
+        publicURL
+      }
+    }
+  `);
   return (
     <Box>
       <MaxWidth>
         <Heading level={2} color="accent-1">
           Contact
         </Heading>
+        <Box direction="row">
+          <Box width="medium">
+            <Form>
+              <FormField label="Name" name="name">
+                <TextInput name="name" />
+              </FormField>
+              <FormField label="Email" name="email" required>
+                <MaskedInput
+                  name="email"
+                  mask={[
+                    { regexp: /^[\w\-_.]+$/, placeholder: "example" },
+                    { fixed: "@" },
+                    { regexp: /^[\w]+$/, placeholder: "my" },
+                    { fixed: "." },
+                    { regexp: /^[\w]+$/, placeholder: "com" },
+                  ]}
+                />
+              </FormField>
+              <FormField label="Message" name="message">
+              <TextArea name="message" />
+            </FormField>
+              <Button type="submit" label="Submit" primary />
+            </Form>
+          </Box>
+          <Image src={data.file.publicURL} fit="contain" fallback="reader" style={{minWidth: "300px", maxWidth: "650px"}}/>
+        </Box>
       </MaxWidth>
     </Box>
   );
