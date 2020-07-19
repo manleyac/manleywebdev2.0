@@ -1,20 +1,20 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-
-import { ProjectCard } from "./ProjectCard.component.jsx"
-
-import "./Projects.styles.css"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { Box, Heading, Image } from "grommet";
+import MaxWidth from "./common/MaxWidth";
+import {ProjectCard} from "./ProjectCard.component";
 
 export const Projects = () => {
   const data = useStaticQuery(graphql`
     query ProjectQuery {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/Projects/" } }) {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/project-files/" } }
+      ) {
         edges {
           node {
             html
             frontmatter {
               deploy
-              image
               path
               repo
               tags
@@ -25,7 +25,7 @@ export const Projects = () => {
         }
       }
     }
-  `)
+  `);
   const projects = data.allMarkdownRemark.edges
   const projectList = []
   for (let i = 0; i < projects.length; i++) {
@@ -40,7 +40,6 @@ export const Projects = () => {
       body: project.node.html,
     })
   }
-
   const compare = (a, b) => {
     let comparison = 0
     if (a.order > b.order) {
@@ -50,13 +49,16 @@ export const Projects = () => {
     }
     return comparison
   }
-
   projectList.sort(compare)
   return (
-    <div name="projects">
-      <h1>Projects</h1>
-      <div className="projects-collection">
-        {projectList.map((project) => {
+    <Box>
+      <MaxWidth>
+        <Box margin={{ left: "1vw", right: "1vw" }}>
+          <Heading level={2} color="accent-1" alignSelf="center">
+            Projects
+          </Heading>
+          <Box direction="row" gap="medium" wrap={true} justify="center">
+          {projectList.map((project) => {
           return (
             <ProjectCard
               title={project.title}
@@ -69,7 +71,10 @@ export const Projects = () => {
             />
           )
         })}
-      </div>
-    </div>
-  )
-}
+          </Box>
+        </Box>
+      </MaxWidth>
+    </Box>
+  );
+};
+

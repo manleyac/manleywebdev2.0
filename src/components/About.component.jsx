@@ -16,30 +16,31 @@ export const About = () => {
   return (
     <Box>
       <MaxWidth>
-        <Heading level={2} color="accent-1">
-          About
-        </Heading>
-        <Box
-          pad="small"
-          direction="row"
-          wrap={true}
-          align="center"
-          justify="around"
-        >
-          <Paragraph size="large" color="gray">
-            The Modern Web can be difficult to navigate. Hire an experienced web
-            developer who will understand your needs, and can guide you through
-            an ever changing environment.
-          </Paragraph>
-          <Image
-            src={data.file.publicURL}
-            fit="contain"
-            fallback="builder"
-            style={{ minWidth: "300px", maxWidth: "650px" }}
-          />
+        <Box margin={{ left: "1vw", right: "1vw" }}>
+          <Heading level={2} color="accent-1" alignSelf="center">
+            About
+          </Heading>
+          <Box
+            pad="small"
+            direction="row"
+            wrap={true}
+            align="center"
+            justify="around"
+          >
+            <Paragraph size="large" color="gray">
+              The Modern Web can be difficult to navigate. Hire an experienced
+              web developer who will understand your needs, and can guide you
+              through an ever changing environment.
+            </Paragraph>
+            <Image
+              src={data.file.publicURL}
+              fit="contain"
+              fallback="builder"
+              style={{ minWidth: "300px", maxWidth: "650px" }}
+            />
+          </Box>
         </Box>
       </MaxWidth>
     </Box>
-  )
+  );
 };
-

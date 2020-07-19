@@ -9,7 +9,7 @@ import {
   TextInput,
   MaskedInput,
   TextArea,
-  Button
+  Button,
 } from "grommet";
 import MaxWidth from "./common/MaxWidth";
 
@@ -25,86 +25,46 @@ export const Contact = () => {
   return (
     <Box>
       <MaxWidth>
-        <Heading level={2} color="accent-1">
-          Contact
-        </Heading>
-        <Box direction="row">
-          <Box width="medium">
-            <Form>
-              <FormField label="Name" name="name">
-                <TextInput name="name" />
-              </FormField>
-              <FormField label="Email" name="email" required>
-                <MaskedInput
-                  name="email"
-                  mask={[
-                    { regexp: /^[\w\-_.]+$/, placeholder: "example" },
-                    { fixed: "@" },
-                    { regexp: /^[\w]+$/, placeholder: "my" },
-                    { fixed: "." },
-                    { regexp: /^[\w]+$/, placeholder: "com" },
-                  ]}
-                />
-              </FormField>
-              <FormField label="Message" name="message">
-              <TextArea name="message" />
-            </FormField>
-              <Button type="submit" label="Submit" primary />
-            </Form>
+       <Box margin={{ left: "1vw", right: "1vw" }}>
+          <Heading level={2} color="accent-1" alignSelf="center">
+            Contact
+          </Heading>
+  
+          <Box direction="row" align="center" justify="around" wrap="reverse">
+            <Image
+              src={data.file.publicURL}
+              fit="contain"
+              fallback="reader"
+              style={{ minWidth: "300px", maxWidth: "650px" }}
+            />
+            <Box width="medium" margin="small" background="white" round="medium" pad="medium" elevation="medium">
+            <Heading alignSelf="center" level={4}>email: andrew@manleyweb.dev</Heading>
+              <Form name="contact" method="POST" data-netlify="true">
+                <FormField label="Name" name="name">
+                  <TextInput name="name" />
+                </FormField>
+                <FormField label="Email" name="email" required>
+                  <MaskedInput
+                    name="email"
+                    mask={[
+                      { regexp: /^[\w\-_.]+$/, placeholder: "example" },
+                      { fixed: "@" },
+                      { regexp: /^[\w]+$/, placeholder: "my" },
+                      { fixed: "." },
+                      { regexp: /^[\w]+$/, placeholder: "com" },
+                    ]}
+                  />
+                </FormField>
+                <FormField label="Message" name="message">
+                  <TextArea name="message" />
+                </FormField>
+                <Button type="submit" label="Submit" color="accent-1" primary />
+              </Form>
+            </Box>
           </Box>
-          <Image src={data.file.publicURL} fit="contain" fallback="reader" style={{minWidth: "300px", maxWidth: "650px"}}/>
-        </Box>
+       </Box>
       </MaxWidth>
     </Box>
   );
 };
 
-// export const Contact = () => (
-//   <div name="contact">
-//     <h1>Contact Me</h1>
-//     <div className="contactBody">
-//       <form
-//         className="contactForm"
-//         method="POST"
-//         data-netlify="true"
-//       >
-//         <p>
-//           <label>
-//             <input
-//               type="text"
-//               name="name"
-//               placeholder="Name"
-//               className="input"
-//             />
-//           </label>
-//         </p>
-//         <p>
-//           <label>
-//             <input
-//               type="email"
-//               name="email"
-//               placeholder="Email"
-//               className="input"
-//             />
-//           </label>
-//         </p>
-//         <p>
-//           <label>
-//             <textarea
-//               name="message"
-//               placeholder="Message"
-//               className="input"
-//             ></textarea>
-//           </label>
-//         </p>
-//         <p>
-//           <button className="contactButton" type="submit">
-//             Send
-//           </button>
-//         </p>
-//       </form>
-//       <img className="contactImg" src={coder} viewBox="0 0 600 425"
-//       preserveAspectRatio="xMidYMid"/>
-//     </div>
-//   </div>
-// )

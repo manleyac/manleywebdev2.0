@@ -2,13 +2,13 @@ backend:
   name: github
   repo: manleyac/manley-portfolio
 
-media_folder: manley-portfolio/src/images
-public_folder: manley-portfolio/src/images
+media_folder: static/images
+public_folder: static
 
 collections:
   - name: blog
     label: Blog
-    folder: manley-portfolio/src/blog/markdown-pages
+    folder: static/blog/markdown-pages
     create: true
     fields:
       - { name: path, label: Path }
@@ -18,7 +18,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: projects
     label: Projects
-    folder: manley-portfolio/src/components/Projects/markdown-pages
+    folder: static/project-files/markdown-pages
     create: true
     fields:
       - { name: title, label: Title, widget: string }
