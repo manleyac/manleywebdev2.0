@@ -1,8 +1,9 @@
 ---
 title: Pokemon Guide
 image: manley-portfolio/src/images/pikachu.png
-deploy: 'https://manleyac.github.io/pokemon-app/'
-repo: 'https://github.com/manleyac/pokemon-app'
+project-image: static/pikachu.png
+deploy: https://manleyac.github.io/pokemon-app/
+repo: https://github.com/manleyac/pokemon-app
 tags:
   - React
   - REST API
