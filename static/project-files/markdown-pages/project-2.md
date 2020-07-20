@@ -1,8 +1,9 @@
 ---
 title: Stock Tracker
 image: manley-portfolio/src/images/github-octocat.png
+project-image: static/octocat.png
 deploy: project.org
-repo: 'https://github.com/manleyac/stock-tracker/'
+repo: https://github.com/manleyac/stock-tracker/
 tags:
   - React
   - Node.js
