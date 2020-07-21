@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import { Box, Heading, Image } from "grommet";
+import { Box, Heading } from "grommet";
 import MaxWidth from "./common/MaxWidth";
 
 const BlogPreview = () => {
   const data = useStaticQuery(graphql`
     query BlogPreview {
       allFile(
-        filter: { sourceInstanceName: { eq: "blog-posts" } }
+        filter: { sourceInstanceName: { eq: "blog" } }
         limit: 3
         sort: { fields: childMarkdownRemark___frontmatter___date, order: DESC }
       ) {

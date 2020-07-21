@@ -23,14 +23,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/blog/markdown-pages`,
-        name: "blog-posts",
+        path: `${__dirname}/src/cms/blog`,
+        name: "blog",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/project-files/markdown-pages`,
+        path: `${__dirname}/src/cms/projects`,
         name: "projects",
       },
     },

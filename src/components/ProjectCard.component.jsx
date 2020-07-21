@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Paragraph, Image, Markdown } from "grommet";
+import { Box, Heading, Paragraph, Markdown } from "grommet";
 import Img from "gatsby-image";
 
 //icon imports
@@ -21,14 +21,14 @@ export const ProjectCard = (props) => {
         <Heading level={3} alignSelf="center" margin="xsmall">
           {props.title}
         </Heading>
-        <Image src={props.image} />
+        
         <Markdown>{props.body}</Markdown>
         <Paragraph>Tech: {props.tags.join(", ")}</Paragraph>
         <Box direction="row" gap="xsmall" justify="end">
-          <a target="_blank" href={props.repo}>
+          <a target="_blank" href={props.repo} rel="noreferrer">
             <FaGithub size={25} color={"#3da9fc"} />
           </a>
-          <a target="_blank" href={props.deploy}>
+          <a target="_blank" href={props.deploy} rel="noreferrer">
             <IoIosGlobe size={25} color={"#3da9fc"} />
           </a>
         </Box>

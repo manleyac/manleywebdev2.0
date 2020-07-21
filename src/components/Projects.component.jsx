@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Box, Heading, Image } from "grommet";
+import { Box, Heading } from "grommet";
 import MaxWidth from "./common/MaxWidth";
 import { ProjectCard } from "./ProjectCard.component";
 
@@ -8,7 +8,7 @@ export const Projects = () => {
   const data = useStaticQuery(graphql`
     query ProjectQuery {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/project-files/" } }
+        filter: { fileAbsolutePath: { regex: "/projects/" } }
       ) {
         edges {
           node {

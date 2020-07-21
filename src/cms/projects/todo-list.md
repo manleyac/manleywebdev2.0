@@ -1,6 +1,5 @@
 ---
 title: Todo List
-projectimage: /images/clip-list-is-empty-c.png
 deploy: https://polar-beach-92609.herokuapp.com/
 repo: https://github.com/manleyac/pern-todo
 tags:
