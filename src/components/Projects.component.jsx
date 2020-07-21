@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Box, Heading, Image } from "grommet";
 import MaxWidth from "./common/MaxWidth";
-import {ProjectCard} from "./ProjectCard.component";
+import { ProjectCard } from "./ProjectCard.component";
 
 export const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -26,10 +26,10 @@ export const Projects = () => {
       }
     }
   `);
-  const projects = data.allMarkdownRemark.edges
-  const projectList = []
+  const projects = data.allMarkdownRemark.edges;
+  const projectList = [];
   for (let i = 0; i < projects.length; i++) {
-    let project = projects[i]
+    let project = projects[i];
     projectList.push({
       title: project.node.frontmatter.title,
       image: project.node.frontmatter.image,
@@ -38,18 +38,18 @@ export const Projects = () => {
       tags: project.node.frontmatter.tags,
       order: project.node.frontmatter.order,
       body: project.node.html,
-    })
+    });
   }
   const compare = (a, b) => {
-    let comparison = 0
+    let comparison = 0;
     if (a.order > b.order) {
-      comparison = 1
+      comparison = 1;
     } else {
-      comparison = -1
+      comparison = -1;
     }
-    return comparison
-  }
-  projectList.sort(compare)
+    return comparison;
+  };
+  projectList.sort(compare);
   return (
     <Box>
       <MaxWidth>
@@ -58,23 +58,22 @@ export const Projects = () => {
             Projects
           </Heading>
           <Box direction="row" gap="medium" wrap={true} justify="center">
-          {projectList.map((project) => {
-          return (
-            <ProjectCard
-              title={project.title}
-              image={project.image}
-              deploy={project.deploy}
-              repo={project.repo}
-              tags={project.tags}
-              order={project.order}
-              body={project.body}
-            />
-          )
-        })}
+            {projectList.map((project) => {
+              return (
+                <ProjectCard
+                  title={project.title}
+                  image={project.image}
+                  deploy={project.deploy}
+                  repo={project.repo}
+                  tags={project.tags}
+                  order={project.order}
+                  body={project.body}
+                />
+              );
+            })}
           </Box>
         </Box>
       </MaxWidth>
     </Box>
   );
 };
-

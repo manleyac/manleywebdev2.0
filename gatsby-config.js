@@ -34,6 +34,15 @@ module.exports = {
         name: "projects",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `site-icon`,
+        short_name: `favicon`,
+        start_url: `/`,
+        icon: `static/images/favicon-32x32.png`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

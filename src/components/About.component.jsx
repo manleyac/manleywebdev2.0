@@ -27,11 +27,13 @@ export const About = () => {
             align="center"
             justify="around"
           >
-            <Paragraph size="large" color="gray">
-              The Modern Web can be difficult to navigate. Hire an experienced
-              web developer who will understand your needs, and can guide you
-              through an ever changing environment.
-            </Paragraph>
+            <Box background="white" elevation="medium" round="small" pad="small">
+              <Paragraph size="large" color="gray" alignSelf="center">
+                The Modern Web can be difficult to navigate. Hire an experienced
+                web developer who will understand your needs, and can guide you
+                through an ever changing environment.
+              </Paragraph>
+            </Box>
             <Image
               src={data.file.publicURL}
               fit="contain"

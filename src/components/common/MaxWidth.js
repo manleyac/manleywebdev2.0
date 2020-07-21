@@ -4,7 +4,7 @@ import { Box } from "grommet"
 const MaxWidth = props => {
   return(
   <Box
-    width={{ "max": "1200px" }}
+    width={{ "max": "1400px" }}
     fill="horizontal"
     margin={{ left: "1vw", right: "1vw" }}
     alignSelf="center"
