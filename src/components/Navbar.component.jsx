@@ -53,7 +53,7 @@ export const Navbar = () => {
           <Box direction="row" justify="between" align="baseline">
             <Link to="/">
               <Heading level={2} margin="small" color="white">
-                Manley Web Dev
+                <span style={{color: "#e94a47", fontSize: "1.25em"}}>{`< `}</span>Manley Web Dev<span style={{color: "#e94a47", fontSize: "1.25em"}}>{` />`}</span>
               </Heading>
             </Link>
             <Box direction="row" gap="small" margin="small">
@@ -76,7 +76,7 @@ export const Navbar = () => {
           <Box direction="row" justify="between" align="baseline">
             <Link id="logo" to="/">
             <Heading level={2} margin="small" color="white">
-              Manley Web Dev
+            <span style={{color: "#e94a47", fontSize: "1.25em"}}>{`< `}</span>Manley Web Dev<span style={{color: "#e94a47", fontSize: "1.25em"}}>{` />`}</span>
             </Heading>
             </Link>
             <NavButton />

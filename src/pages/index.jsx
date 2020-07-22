@@ -35,7 +35,7 @@ const lightTheme = {
 const IndexPage = () => {
   return (
     <Grommet theme={lightTheme}>
-      <SEO />
+      <SEO title="Manley Web Dev"/>
       <Navbar />
       <Intro />
       <BlogPreview />

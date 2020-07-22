@@ -7,37 +7,46 @@ import { ProjectCard } from "./ProjectCard.component";
 export const Projects = () => {
   const data = useStaticQuery(graphql`
     query ProjectQuery {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/projects/" } }
-      ) {
+      allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
         edges {
           node {
-            html
-            frontmatter {
-              deploy
-              path
-              repo
-              tags
-              title
-              order
+            id
+            childMarkdownRemark {
+              html
+              frontmatter {
+                deploy
+                order
+                repo
+                tags
+                title
+                featuredImage {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
     }
   `);
-  const projects = data.allMarkdownRemark.edges;
+  const projects = data.allFile.edges;
   const projectList = [];
   for (let i = 0; i < projects.length; i++) {
     let project = projects[i];
     projectList.push({
-      title: project.node.frontmatter.title,
-      image: project.node.frontmatter.image,
-      deploy: project.node.frontmatter.deploy,
-      repo: project.node.frontmatter.repo,
-      tags: project.node.frontmatter.tags,
-      order: project.node.frontmatter.order,
-      body: project.node.html,
+      title: project.node.childMarkdownRemark.frontmatter.title,
+      image:
+        project.node.childMarkdownRemark.frontmatter.featuredImage
+          .childImageSharp.fluid,
+      deploy: project.node.childMarkdownRemark.frontmatter.deploy,
+      repo: project.node.childMarkdownRemark.frontmatter.repo,
+      tags: project.node.childMarkdownRemark.frontmatter.tags,
+      order: project.node.childMarkdownRemark.frontmatter.order,
+      body: project.node.childMarkdownRemark.html,
     });
   }
   const compare = (a, b) => {
@@ -51,7 +60,7 @@ export const Projects = () => {
   };
   projectList.sort(compare);
   return (
-    <Box>
+    <Box id="projects">
       <MaxWidth>
         <Box margin={{ left: "1vw", right: "1vw" }}>
           <Heading level={2} color="accent-1" alignSelf="center">

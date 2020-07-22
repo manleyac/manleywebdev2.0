@@ -14,7 +14,7 @@ export const About = () => {
   `);
 
   return (
-    <Box>
+    <Box id="about">
       <MaxWidth>
         <Box margin={{ left: "1vw", right: "1vw" }}>
           <Heading level={2} color="accent-1" alignSelf="center">
