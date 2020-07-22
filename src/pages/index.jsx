@@ -32,6 +32,10 @@ const lightTheme = {
   },
 };
 
+if (typeof window !== "undefined") {
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const IndexPage = () => {
   return (
     <Grommet theme={lightTheme}>

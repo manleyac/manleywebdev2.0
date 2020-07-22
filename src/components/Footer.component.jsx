@@ -29,11 +29,11 @@ export const Footer = () => {
           <Text
             color="white"
             alignSelf="start"
-            margin={{ top: "24px", bottom: "8px" }}
+            margin={{ top: "36px", bottom: "16px" }}
           >
             Andrew Manley <span> © {new Date().getFullYear()}</span>
           </Text>
-          <Box direction="row" alignSelf="end" gap="small">
+          <Box direction="row" alignSelf="end" gap="small" margin={{bottom: "12px"}}>
             <a
               href="https://twitter.com/DevManley"
               target="_blank"

@@ -2,7 +2,7 @@
 path: /blog/How-I-Built-This-Site
 date: 2020-03-02T05:00:00.000Z
 title: How I Built This Site
-image: manley-portfolio/src/images/gatsbyNetlify.png
+image: /images/gatsbyNetlify.png
 ---
 This site is built using using [Gatsby](https://www.gatsbyjs.org/), a static site generator, and connected to [Netlify](https://www.netlifycms.org/), a Content Management System.
 

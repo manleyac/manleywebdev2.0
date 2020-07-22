@@ -2,7 +2,7 @@
 path: /blog/react-burger
 date: 2020-04-22T04:00:00.000Z
 title: A Simple React Burger Menu
-image: manley-portfolio/src/images/burgerIcon.png
+image: /images/burgerIcon.png
 ---
 When creating this website, I wanted one component for a burger menu, where I could pass state from my navbar. Many available libraries were much larger than what I needed, or included animations that were incompatible with React. Therefore, I decided to create my own. 
 

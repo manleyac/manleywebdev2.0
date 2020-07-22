@@ -35,7 +35,13 @@ const BlogPreview = () => {
           <Heading level={2} color="accent-1" alignSelf="center">
             Blog
           </Heading>
-          <Box gap="small" alignSelf="center">
+          <Box
+            gap="small"
+            alignSelf="center"
+            direction="row"
+            justify="center"
+            wrap={true}
+          >
             {posts.map((post) => {
               return (
                 <Link to={post.node.childMarkdownRemark.frontmatter.path}>
