@@ -12,5 +12,5 @@ Gatsby combines React, GraphQL, and WebPack to automatically build and optimize 
 ## Why Netlify?
 Netlify serves a dual purpose of hosting this site and being the CMS. Blog posts are written in Markdown. All changes are commited to this site's github repo, which then triggers Gatsby to rebuild the site. New blog posts can be published in a matter of seconds!
 
-#### See the repo for my site on [github](https://github.com/manleyac/manley-portfolio)
+#### See the repo for my site on [github](https://github.com/manleyac/manleywebdev2.0)
 
