@@ -70,6 +70,7 @@ export const Projects = () => {
             {projectList.map((project) => {
               return (
                 <ProjectCard
+                  key={project.order}
                   title={project.title}
                   image={project.image}
                   deploy={project.deploy}

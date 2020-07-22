@@ -22,7 +22,7 @@ export const ProjectCard = (props) => {
           {props.title}
         </Heading>
         <Box alignSelf="center" alignContent="center">
-          <Img fluid={props.image}/>
+          <Img fluid={props.image} />
           <Markdown margin="xsmall">{props.body}</Markdown>
           <Paragraph margin="xsmall">Tech: {props.tags.join(", ")}</Paragraph>
         </Box>

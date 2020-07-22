@@ -44,7 +44,10 @@ const BlogPreview = () => {
           >
             {posts.map((post) => {
               return (
-                <Link to={post.node.childMarkdownRemark.frontmatter.path}>
+                <Link
+                  to={post.node.childMarkdownRemark.frontmatter.path}
+                  key={post.node.childMarkdownRemark.frontmatter.path}
+                >
                   <Box
                     width="medium"
                     margin="small"
