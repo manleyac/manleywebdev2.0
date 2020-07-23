@@ -36,24 +36,27 @@ const BlogPreview = () => {
             Blog
           </Heading>
           <Box
-            gap="small"
             alignSelf="center"
-            direction="row"
-            justify="center"
-            wrap={true}
+            direction="column"
+            fill={true}
           >
             {posts.map((post) => {
               return (
-                <Link
-                  to={post.node.childMarkdownRemark.frontmatter.path}
-                  key={post.node.childMarkdownRemark.frontmatter.path}
+                <Box
+                  style={{
+                    width: "100%",
+                    minWidth: "275px",
+                    maxWidth: "400px",
+                  }}
+                  margin="small"
+                  background="white"
+                  round="medium"
+                  elevation="medium"
+                  alignSelf="center"
                 >
-                  <Box
-                    width="medium"
-                    margin="small"
-                    background="white"
-                    round="medium"
-                    elevation="medium"
+                  <Link
+                    to={post.node.childMarkdownRemark.frontmatter.path}
+                    key={post.node.childMarkdownRemark.frontmatter.path}
                   >
                     <Heading
                       level={4}
@@ -62,18 +65,20 @@ const BlogPreview = () => {
                     >
                       {post.node.childMarkdownRemark.frontmatter.title}
                     </Heading>
-                  </Box>
-                </Link>
+                  </Link>
+                </Box>
               );
             })}
-            <Link to="/blog">
-              <Box
-                width="medium"
-                margin="small"
-                background="white"
-                round="medium"
-                elevation="medium"
-              >
+
+            <Box
+              style={{ width: "100%", minWidth: "275px", maxWidth: "400px" }}
+              margin="small"
+              background="white"
+              round="medium"
+              elevation="medium"
+              alignSelf="center"
+            >
+              <Link to="/blog">
                 <Heading
                   level={4}
                   alignSelf="center"
@@ -81,8 +86,8 @@ const BlogPreview = () => {
                 >
                   See All
                 </Heading>
-              </Box>
-            </Link>
+              </Link>
+            </Box>
           </Box>
         </Box>
       </MaxWidth>
