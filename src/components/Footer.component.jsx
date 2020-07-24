@@ -26,13 +26,16 @@ export const Footer = () => {
           justify="between"
           margin={{ left: "1vw", right: "1vw" }}
         >
-          <Text
-            color="white"
-            alignSelf="start"
-            margin={{ top: "36px", bottom: "16px" }}
-          >
-            Andrew Manley <span> © {new Date().getFullYear()}</span>
-          </Text>
+          <Box>
+            <Text
+              color="white"
+              alignSelf="start"
+              margin={{ top: "36px", bottom: "2px" }}
+            >
+              Andrew Manley <span> © {new Date().getFullYear()}</span>
+            </Text>
+            <a href="https://icons8.com/" style={{marginBottom: "8px"}}><Text color="white">graphics by icons8</Text></a>
+          </Box>
           <Box direction="row" alignSelf="end" gap="small" margin={{bottom: "12px"}}>
             <a
               href="https://twitter.com/DevManley"

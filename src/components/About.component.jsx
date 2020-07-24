@@ -1,6 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Box, Heading, Image, Paragraph } from "grommet";
+import { Reactjs } from "grommet-icons";
+import { Node } from "grommet-icons";
+import { Gatsbyjs } from "grommet-icons";
 import MaxWidth from "./common/MaxWidth";
 
 export const About = () => {
@@ -27,12 +30,35 @@ export const About = () => {
             align="center"
             justify="around"
           >
-            <Box background="white" elevation="medium" round="small" pad="small">
-              <Paragraph size="large" color="gray" alignSelf="center">
+            <Box
+              background="white"
+              elevation="medium"
+              round="small"
+              pad="small"
+            >
+              <Paragraph
+                margin="small"
+                size="large"
+                color="gray"
+                alignSelf="center"
+              >
                 The Modern Web can be difficult to navigate. Hire an experienced
                 web developer who will understand your needs, and can guide you
                 through an ever changing environment.
               </Paragraph>
+              <Paragraph
+                margin="small"
+                size="large"
+                color="gray"
+                alignSelf="center"
+              >
+                Technologies I use frequently:
+              </Paragraph>
+              <Box direction="row" gap="small" alignSelf="center">
+                <Reactjs size="large" color="plain" />
+                <Gatsbyjs size="large" color="plain" />
+                <Node size="large" color="plain" />
+              </Box>
             </Box>
             <Image
               src={data.file.publicURL}

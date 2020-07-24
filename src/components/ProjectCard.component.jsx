@@ -27,9 +27,9 @@ export const ProjectCard = (props) => {
           <Paragraph margin="xsmall">Tech: {props.tags.join(", ")}</Paragraph>
         </Box>
         <Box direction="row" gap="xsmall" justify="end">
-          <a target="_blank" href={props.repo} rel="noreferrer">
+          {props.repo && <a target="_blank" href={props.repo} rel="noreferrer">
             <Github size="medium" color={"#3da9fc"} />
-          </a>
+          </a> }
           <a target="_blank" href={props.deploy} rel="noreferrer">
             <Language size="medium" color={"#3da9fc"} />
           </a>

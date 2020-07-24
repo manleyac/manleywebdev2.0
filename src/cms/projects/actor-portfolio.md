@@ -9,4 +9,4 @@ tags:
   - Netlify CMS
 order: 2
 ---
-A portfolio website to showcase an actor's work.
+A website to showcase an actor's work.
