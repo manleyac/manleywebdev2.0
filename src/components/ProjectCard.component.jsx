@@ -18,18 +18,20 @@ export const ProjectCard = (props) => {
       pad="small"
     >
       <Box>
-        <Heading level={3} alignSelf="center" margin="xsmall">
-          {props.title}
-        </Heading>
         <Box alignSelf="center" alignContent="center">
-          <Img fluid={props.image} />
+          <Img fluid={props.image} alt={props.title} />
+          <Heading level={3} alignSelf="center" margin="xsmall">
+            {props.title}
+          </Heading>
           <Markdown margin="xsmall">{props.body}</Markdown>
           <Paragraph margin="xsmall">Tech: {props.tags.join(", ")}</Paragraph>
         </Box>
         <Box direction="row" gap="xsmall" justify="end">
-          {props.repo && <a target="_blank" href={props.repo} rel="noreferrer">
-            <Github size="medium" color={"#3da9fc"} />
-          </a> }
+          {props.repo && (
+            <a target="_blank" href={props.repo} rel="noreferrer">
+              <Github size="medium" color={"#3da9fc"} />
+            </a>
+          )}
           <a target="_blank" href={props.deploy} rel="noreferrer">
             <Language size="medium" color={"#3da9fc"} />
           </a>

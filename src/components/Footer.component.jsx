@@ -38,18 +38,18 @@ export const Footer = () => {
           </Box>
           <Box direction="row" alignSelf="end" gap="small" margin={{bottom: "12px"}}>
             <a
-              href="https://twitter.com/DevManley"
+              href="https://github.com/manleyac/manleywebdev2.0"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`follow me on twitter`}
+              aria-label={`follow me on github`}
             >
               <Image width="30" src={twitter} alt="twitter" />
             </a>
             <a
-              href="https://github.com/manleyac"
+              href="https://twitter.com/DevManley"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`follow me on github`}
+              aria-label={`follow me on twitter`}
             >
               <Image width="30" src={github} alt="github" />
             </a>
@@ -60,12 +60,4 @@ export const Footer = () => {
   );
 };
 
-// <div className="footer">
-// <div className="rights">
-//   <h4>Andrew Manley</h4>
-//   <span> © {new Date().getFullYear()}</span>
-// </div>
-// <div className="socialLinks">
 
-// </div>
-// </div>
