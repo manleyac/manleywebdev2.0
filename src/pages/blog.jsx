@@ -9,7 +9,7 @@ import MaxWidth from "../components/common/MaxWidth";
 const lightTheme = {
   global: {
     font: {
-      family: "Roboto",
+      family: "PT Sans",
     },
     colors: {
       brand: "#18314f",

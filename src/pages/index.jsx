@@ -15,7 +15,7 @@ import "./app.styles.css";
 const lightTheme = {
   global: {
     font: {
-      family: "Roboto",
+      family: "PT Sans",
     },
     colors: {
       brand: "#18314f",
