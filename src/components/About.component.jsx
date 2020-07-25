@@ -39,7 +39,7 @@ export const About = () => {
               <Paragraph
                 margin="small"
                 size="large"
-                color="gray"
+                color="accent-2"
                 alignSelf="center"
               >
                 The Modern Web can be difficult to navigate. Hire an experienced
@@ -49,7 +49,7 @@ export const About = () => {
               <Paragraph
                 margin="small"
                 size="large"
-                color="gray"
+                color="accent-2"
                 alignSelf="center"
               >
                 Technologies I use frequently:

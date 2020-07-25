@@ -22,7 +22,7 @@ export const Intro = () => {
       </Box>
       <MaxWidth>
         <Box pad="small" direction="row" wrap={true} align="center" justify="around">
-          <Heading level={3} color="gray">
+          <Heading level={3} color="brand">
             Hi! My name is Andrew, and I’m a web developer!
           </Heading>
           <Image src={data.file.publicURL} fit="contain" fallback="reader" style={{minWidth: "300px", maxWidth: "650px"}}/>

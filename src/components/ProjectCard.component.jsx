@@ -23,8 +23,8 @@ export const ProjectCard = (props) => {
           <Heading level={3} alignSelf="center" margin="xsmall">
             {props.title}
           </Heading>
-          <Markdown margin="xsmall">{props.body}</Markdown>
-          <Paragraph margin="xsmall">Tech: {props.tags.join(", ")}</Paragraph>
+          <Markdown margin="xsmall" color="accent-2">{props.body}</Markdown>
+          <Paragraph margin="xsmall" color="accent-2">Tech: {props.tags.join(", ")}</Paragraph>
         </Box>
         <Box direction="row" gap="xsmall" justify="end">
           {props.repo && (

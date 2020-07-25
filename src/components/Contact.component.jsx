@@ -39,8 +39,8 @@ export const Contact = () => {
             />
             <Box width="medium" margin="small" background="white" round="medium" pad="medium" elevation="medium">
             <Heading alignSelf="center" level={4}>email: andrew@manleyweb.dev</Heading>
-              <Form name="contact" method="POST" data-netlify="true">
-                <FormField label="Name" name="name">
+              <Form color="accent-2" name="contact" method="POST" data-netlify="true">
+                <FormField  label="Name" name="name">
                   <TextInput name="name" />
                 </FormField>
                 <FormField label="Email" name="email" required>

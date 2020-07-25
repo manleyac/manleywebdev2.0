@@ -19,9 +19,9 @@ const lightTheme = {
     },
     colors: {
       brand: "#18314f",
-      background: "#E6FAFC",
+      background: "#EDFCFD",
       "accent-1": "#e94a47",
-      "accent-2" : "",
+      "accent-2" : "#585A5F",
       "accent-3" : "",
       "accent-4" : "",
       focus: "dark-6",
