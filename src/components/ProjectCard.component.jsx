@@ -14,7 +14,7 @@ export const ProjectCard = (props) => {
       background="white"
       elevation="medium"
       round="small"
-      margin="small"
+      margin="medium"
       pad="small"
     >
       <Box>

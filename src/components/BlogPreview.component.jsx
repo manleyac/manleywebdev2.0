@@ -53,6 +53,7 @@ const BlogPreview = () => {
                   round="medium"
                   elevation="medium"
                   alignSelf="center"
+                  key={post.node.childMarkdownRemark.frontmatter.title}
                 >
                   <Link
                     to={post.node.childMarkdownRemark.frontmatter.path}

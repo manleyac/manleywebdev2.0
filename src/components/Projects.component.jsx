@@ -62,11 +62,11 @@ export const Projects = () => {
   return (
     <Box id="projects">
       <MaxWidth>
-        <Box margin={{ left: "1vw", right: "1vw" }}>
+        <Box margin={{ left: "2vw", right: "2vw" }}>
           <Heading level={2} color="accent-1" alignSelf="center">
             Projects
           </Heading>
-          <Box direction="row" gap="medium" wrap={true} justify="center">
+          <Box direction="row" wrap={true} justify="center">
             {projectList.map((project) => {
               return (
                 <ProjectCard

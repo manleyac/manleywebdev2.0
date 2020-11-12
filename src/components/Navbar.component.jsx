@@ -46,7 +46,7 @@ export const Navbar = () => {
     <Header
       background="brand"
       elevation="xlarge"
-      style={{ position: "fixed", top: 0, width: "100%", zIndex: 5 }}
+      style={{ position: "sticky", top: 0, width: "100%", zIndex: 5}}
     >
       <Box alignContent="center" fill="horizontal">
         <MaxWidth>
@@ -69,7 +69,7 @@ export const Navbar = () => {
     <Box
       background="brand"
       elevation="xlarge"
-      style={{ position: "fixed", top: 0, width: "100%", zIndex: 5 }}
+      style={{ position: "sticky", top: 0, width: "100%", zIndex: 5 }}
     >
       <Header background="brand">
         <Box alignContent="center" fill="horizontal">
