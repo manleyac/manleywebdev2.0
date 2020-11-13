@@ -10,5 +10,5 @@ tags:
   - PostgreSQL
 order: 1
 ---
-A Fullstack blogging application complete with user authentication, markdown blog posts, voting, and commenting.
+A Fullstack blogging application.
 
