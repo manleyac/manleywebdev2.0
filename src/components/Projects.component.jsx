@@ -66,7 +66,7 @@ export const Projects = () => {
           <Heading level={2} color="accent-1" alignSelf="center">
             Projects
           </Heading>
-          <Box direction="row" wrap={true} justify="center">
+          <Box direction="row" wrap={true} justify="center" alignContent="center">
             {projectList.map((project) => {
               return (
                 <ProjectCard

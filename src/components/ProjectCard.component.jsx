@@ -16,10 +16,12 @@ export const ProjectCard = (props) => {
       round="small"
       margin="medium"
       pad="small"
+      fill={false}
+      alignSelf="center"
     >
       <Box>
         <Box alignSelf="center" alignContent="center">
-          <Img fluid={props.image} alt={props.title} />
+          <Img fluid={props.image} alt={props.title} style={{}}/>
           <Heading level={3} alignSelf="center" margin="xsmall">
             {props.title}
           </Heading>
