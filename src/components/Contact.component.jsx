@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import emailjs from 'emailjs-com';
 import {
   Box,
   Heading,
@@ -7,17 +8,10 @@ import {
   Form,
   FormField,
   TextInput,
-  MaskedInput,
   TextArea,
   Button,
 } from "grommet";
 import MaxWidth from "./common/MaxWidth";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 
 const defaultValue = {
   name: "",
@@ -26,21 +20,16 @@ const defaultValue = {
 };
 
 export const Contact = () => {
-  const [state, setState] = useState({ defaultValue });
+  const [values, setValues] = useState(defaultValue);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state,
-      }),
-    })
-      .then(() => setState(defaultValue))
-      .catch((error) => alert(error));
+  const handleSubmit = () => {
+    emailjs.send('service_oqu93cj', 'template_u6leoug', values, 'user_7VoogBOdixVFaA9RFTqLq')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    setValues(defaultValue);
   };
 
   const data = useStaticQuery(graphql`
@@ -51,6 +40,7 @@ export const Contact = () => {
       }
     }
   `);
+
   return (
     <Box id="contact">
       <MaxWidth>
@@ -80,20 +70,10 @@ export const Contact = () => {
               <Form
                 color="accent-2"
                 name="contact"
-                method="post"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onChange={(e) => setState(e)}
+                onChange={(nextValue) => setValues(nextValue)}
                 onSubmit={handleSubmit}
-                value={state}
+                value={values}
               >
-                <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
-                  <label>
-                    Don’t fill this out:{" "}
-                    <input name="bot-field" onChange={(e) => setState(e)} />
-                  </label>
-                </p>
                 <FormField htmlfor="text-input-id" label="Name" name="name">
                   <TextInput
                     id="text-input-id"
@@ -104,7 +84,7 @@ export const Contact = () => {
                 <FormField label="Email" name="email" required>
                   <TextInput
                     name="email"
-                    placeholder="email"
+                    placeholder="my@email.com"
                   />
                 </FormField>
                 <FormField label="Message" name="message">
