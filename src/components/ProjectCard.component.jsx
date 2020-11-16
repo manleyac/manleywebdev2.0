@@ -20,13 +20,19 @@ export const ProjectCard = (props) => {
       alignSelf="center"
     >
       <Box>
-        <Box alignSelf="center" alignContent="center">
-          <Img fluid={props.image} alt={props.title} style={{}}/>
+        <Box  style={{maxHeight: "220px"}} alignContent="center">
+          <Img fluid={props.image} alt={props.title} />
+        </Box>
+        <Box>
           <Heading level={3} alignSelf="center" margin="xsmall">
             {props.title}
           </Heading>
-          <Markdown margin="xsmall" color="accent-2">{props.body}</Markdown>
-          <Paragraph margin="xsmall" color="accent-2">Tech: {props.tags.join(", ")}</Paragraph>
+          <Markdown margin="xsmall" color="accent-2">
+            {props.body}
+          </Markdown>
+          <Paragraph margin="xsmall" color="accent-2">
+            Tech: {props.tags.join(", ")}
+          </Paragraph>
         </Box>
         <Box direction="row" gap="xsmall" justify="end">
           {props.repo && (

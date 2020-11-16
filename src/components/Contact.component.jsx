@@ -102,15 +102,9 @@ export const Contact = () => {
                   />
                 </FormField>
                 <FormField label="Email" name="email" required>
-                  <MaskedInput
+                  <TextInput
                     name="email"
-                    mask={[
-                      { regexp: /^[\w\-_.]+$/, placeholder: "example" },
-                      { fixed: "@" },
-                      { regexp: /^[\w]+$/, placeholder: "my" },
-                      { fixed: "." },
-                      { regexp: /^[\w]+$/, placeholder: "com" },
-                    ]}
+                    placeholder="email"
                   />
                 </FormField>
                 <FormField label="Message" name="message">

@@ -1,13 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { Grommet, Box, Heading, Markdown } from "grommet";
+import { Grommet, Box, Heading } from "grommet";
 import SEO from "../components/seo";
 import { Navbar } from "../components/Navbar.component.jsx";
 import { Footer } from "../components/Footer.component.jsx";
 import MaxWidth from "../components/common/MaxWidth";
+import CustomMD from "../components/common/CustomMD";
 
 import "../pages/app.styles.css";
+import "../pages/prism.css";
 
 const lightTheme = {
   global: {
@@ -34,22 +36,26 @@ const BlogPost = ({ data }) => {
 
   return (
     <Grommet theme={lightTheme}>
-      <SEO title={"| Blog"}/>
+      <SEO title={"| Blog"} />
       <Navbar />
-      <Box  margin={{ left: "1vw", right: "1vw" }}>
-        <Heading level={2} color="background">
-          hidden content
-        </Heading>
+      <Box pad={{ left: "1vw", right: "1vw" }}>
         <MaxWidth>
           <Box>
-            <Img fluid={frontmatter.image.childImageSharp.fluid} style={{maxHeight: "600px"}}/>
+          <Box direction="row" style={{alignContent: "center"}}>
+              <Img
+                fixed={frontmatter.image.childImageSharp.fixed}
+                style={{display: "block", marginLeft: "auto", marginRight: "auto", alignSelf: "center", alignContent: "center"}}
+              />
+          </Box>
             <Heading level={2} margin="small" alignSelf="center">
               {frontmatter.title}
             </Heading>
             <Heading level={5} alignSelf="center">
               {frontmatter.date}
             </Heading>
-            <Box alignSelf="center"><Markdown alignSelf="center">{html}</Markdown></Box>
+            <Box pad={{ left: "small", right: "small" }}>
+              <CustomMD>{html}</CustomMD>
+            </Box>
           </Box>
         </MaxWidth>
       </Box>
@@ -71,8 +77,8 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
+                fixed {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

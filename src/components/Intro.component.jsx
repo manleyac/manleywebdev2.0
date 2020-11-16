@@ -15,11 +15,6 @@ export const Intro = () => {
 
   return (
     <Box>
-      <Box>
-        <Heading level={2} color="background">
-          hidden content
-        </Heading>
-      </Box>
       <MaxWidth>
         <Box pad="small" direction="row" wrap={true} align="center" justify="around">
           <Heading level={3} color="brand">
