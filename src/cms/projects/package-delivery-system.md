@@ -5,4 +5,4 @@ tags:
   - Python
 order: 3
 ---
-Delivery system with a greedy algorithm optimization
+Delivery system with a greedy algorithm
