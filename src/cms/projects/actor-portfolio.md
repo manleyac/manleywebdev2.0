@@ -7,6 +7,6 @@ tags:
   - Gatsby.JS
   - Grommet UI
   - Netlify CMS
-order: 2
+order: 3
 ---
 A website to showcase an actor's work.
