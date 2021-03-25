@@ -1,7 +1,7 @@
 ---
-title: Tara Segda.com
+title: tarasegda.com
 featuredImage: /images/clip-287.png
-deploy: https://vigorous-snyder-1396ae.netlify.app/
+deploy: https://www.tarasegda.com/
 repo: ""
 tags:
   - GatsbyJS
